@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Learning about bulding pages",
+  "author": " ",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "autoprefixer-stylus": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-less": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "jeet": "^7.1.0",
+    "nib": "*",
+    "node-sass": "^4.5.3",
+    "rupture": "*",
+    "stylus": "^0.54.5",
+    "webpack": "^3.5.5"
+  }
+}
