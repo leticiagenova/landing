@@ -15,20 +15,33 @@ nav.main_menu
   right 0
   ul li
     display inline-block
-    margin-left 55px
+    margin-left 40px
     {FONT_SANS_REGULAR}
     color white
-    //a:after
-    //  content ''
-    //  width 0
-    //  height 2px
-    //  background-color blue
-    //  margin-top 2px
-    //  transition width .3s
-    //  display block
-    //a:hover
-    //  &:after
-    //    width 70%
+    z-index 1
+    position relative
+    padding 10px
+    a:after
+      text-align left
+      content ''
+      margin 0
+      opacity 0
+      position absolute
+      bottom 0
+      left 0
+      right 0
+      width 0%
+      border-radius 5px
+    a:hover
+      color #3C6EB2
+      z-index 1
+      &:after
+        z-index -10
+        animation fill .5s forwards
+        -webkit-animation fill .5s forwards
+        -moz-animation fill .5s forwards
+        opacity 1
+        width 100%
   button.menu_hamburger
     margin-left 55px
     width 40px
@@ -37,6 +50,22 @@ nav.main_menu
     border none
     background-color #fff
     color #7b7b7b
+
+
+  @-webkit-keyframes fill
+   0%
+    width 0%
+    height 1px
+
+    50%
+      width 100%
+      height 1px
+
+    100%
+      width 100%
+      height 100%
+      background #fff
+
 div.logo
   display inline-block
   margin-top 20px
