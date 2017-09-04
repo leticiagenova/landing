@@ -13,7 +13,7 @@ nav.main_menu
   position absolute
   top 53px
   right 0
-  ul li
+  ul.list li
     display inline-block
     margin-left 40px
     {FONT_SANS_REGULAR}
@@ -33,7 +33,7 @@ nav.main_menu
       width 0%
       border-radius 5px
     a:hover
-      color #3C6EB2
+      color #fff
       z-index 1
       &:after
         z-index -10
@@ -43,15 +43,61 @@ nav.main_menu
         opacity 1
         width 100%
   button.menu_hamburger
-    margin-left 55px
-    width 40px
-    height 40px
-    border-radius 100%
-    border none
+      margin-left 55px
+      width 40px
+      height 40px
+      border-radius 100%
+      border none
+      background-color #fff
+      color #7b7b7b
+      z-index:10000000000000;
+      &:hover
+        background-color #3C6EB2
+        color #fff
+    .cross
+      margin-left 55px
+      width 40px
+      height 40px
+      border-radius 100%
+      border none
+      background-color #fff
+      color #7b7b7b
+      z-index 10000000000000
+      font-size 1rem
+      &:hover
+        background-color #3C6EB2
+        color #fff
+  .menu
     background-color #fff
-    color #7b7b7b
+    z-index 1000000
+    width 40%
+    position absolute
+    right 0
+    border-radius 5px
+    top 55px
+    ul.list_hamburger
+      display block
+      a
+        color #3C6EB2
+        &:hover
+          color white
+          transition none
+      li
+        border-bottom 1px solid #3C6EB2
+        width 100%
+        text-align center
+        padding 15px 0
+        {FONT_SANS_REGULAR}
+        &:hover
+          background-color #3C6EB2
+          -webkit-transition 0.3s ease-in
+          -moz-transition 0.3s ease-in
+          -o-transition 0.3s ease-in
+          transition 0.3s ease-in
 
 
+
+  /*HOVER FILL MENU*/
   @-webkit-keyframes fill
    0%
     width 0%
@@ -64,8 +110,8 @@ nav.main_menu
     100%
       width 100%
       height 100%
-      background #fff
-
+      background #3C6EB2
+/*END HOVER FILL MENU*/
 div.logo
   display inline-block
   margin-top 20px
@@ -98,6 +144,22 @@ div.social_media .fa-facebook, .fa-twitter
   right 0
   text-align center
 
+div.social_media .fa-twitter:hover
+  background-color #0084b4
+  border-color #0084b4
+  -webkit-transition 0.3s ease-in
+  -moz-transition 0.3s ease-in
+  -o-transition 0.3s ease-in
+  transition 0.3s ease-in
+
+div.social_media .fa-facebook:hover
+  border-color #3b5998
+  background-color #3b5998
+  -webkit-transition 0.3s ease-in
+  -moz-transition 0.3s ease-in
+  -o-transition 0.3s ease-in
+  transition 0.3s ease-in
+
 div.social_media:before
   content ''
   border 1px solid #fff
@@ -109,7 +171,6 @@ div.social_media:before
 i.fa.fa-facebook
   top 330px
 
-  
 /* HERO IMAGE */
   
 div.hero-image
@@ -214,7 +275,8 @@ div.form_group
 div.title
   column(2/2)
   margin-top:120px
-  h1
+  h2
+    font-family: 'Playfair Display', serif;
     font-size 2.5vw
     display inline
     float left
@@ -241,14 +303,27 @@ div.options
   text-align justify
   margin-top 80px
   padding-bottom 80px
-
-
-
-
-
-
-
-
-
-
+  position relative
+  img
+    max-width 65px
+    max-height 65px
+    margin-left 70px
+    margin-bottom 20px
+  h3
+    color darkslateblue
+    {FONT_SANS_REGULAR}
+    font-size 1.1rem
+    letter-spacing 0.1 rem
+    margin-bottom 20px
+    &:before
+      content ''
+      border-bottom 2px solid #3C6EB2
+      width 55px
+      display inline-block
+      margin-bottom 5px
+      margin-right 20px
+  p
+    {FONT_SANS_REGULAR}
+    line-height 1.4
+    color darkslateblue
 
