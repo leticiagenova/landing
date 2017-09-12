@@ -6,6 +6,7 @@ $(function() {
 // * Created by leticiagenova on 24/08/17.
 // */
 
+//HAMBURGER MENU
 
 $( document ).ready(function() {
 
@@ -25,4 +26,14 @@ $( document ).ready(function() {
         });
     });
 
+});
+
+ //QUESTIONS HERO IMAGE
+
+$( "#todo" ).click(function() {
+    $( "#todo_text" ).focus();
+});
+
+$( "#togo" ).click(function() {
+    $( "#togo_text" ).focus();
 });

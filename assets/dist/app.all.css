@@ -244,9 +244,9 @@ nav.main_menu .menu {
   z-index: 1000000;
   width: 40%;
   position: absolute;
-  right: 0;
+  right: -45px;
   border-radius: 5px;
-  top: 55px;
+  top: 47px;
 }
 nav.main_menu .menu ul.dropdown_menu {
   display: block;
@@ -389,29 +389,35 @@ div.form_group label {
   font-size: 2vh;
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
+  display: inline;
 }
 div.form_group input[type="radio"] {
   display: none;
 }
 div.form_group input[type="radio"] + label:before {
+  font-family: FontAwesome;
+  content: '\f1db';
   display: inline-block;
-  content: '';
-  width: 15px;
-  height: 15px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  margin-right: 20px;
+  padding: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  line-height: 1.8;
 }
 div.form_group input[type="radio"]:checked + label:before {
-  border-color: #f00;
-  transition: 0.3s ease-in;
+  font-family: FontAwesome;
+  content: "\f058";
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: middle;
+  mline-height: 1.8;
+  border-color: #00f;
 }
 div.form_group input[type="text"] {
   border: none;
   border-bottom: 2px solid #dcdfe1;
   outline: none;
   background-color: transparent;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #fff;
   margin-top: 6px;
 }
