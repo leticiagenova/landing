@@ -149,7 +149,7 @@ body i {
 }
 .container {
   position: relative;
-  width: 1024px;
+  max-width: 1024px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -225,7 +225,7 @@ nav.main_menu button.menu_hamburger:hover {
   background-color: #3c6eb2;
   color: #fff;
 }
-nav.main_menu .cross {
+nav.main_menu button.cross {
   margin-left: 55px;
   width: 40px;
   height: 40px;
@@ -234,9 +234,8 @@ nav.main_menu .cross {
   background-color: #fff;
   color: #7b7b7b;
   z-index: 10000000000000;
-  font-size: 1rem;
 }
-nav.main_menu .cross:hover {
+nav.main_menu button.cross:hover {
   background-color: #3c6eb2;
   color: #fff;
 }
@@ -249,17 +248,17 @@ nav.main_menu .menu {
   border-radius: 5px;
   top: 55px;
 }
-nav.main_menu .menu ul.list_hamburger {
+nav.main_menu .menu ul.dropdown_menu {
   display: block;
 }
-nav.main_menu .menu ul.list_hamburger a {
+nav.main_menu .menu ul.dropdown_menu a {
   color: #3c6eb2;
 }
-nav.main_menu .menu ul.list_hamburger a:hover {
+nav.main_menu .menu ul.dropdown_menu a:hover {
   color: #fff;
   transition: none;
 }
-nav.main_menu .menu ul.list_hamburger li {
+nav.main_menu .menu ul.dropdown_menu li {
   border-bottom: 1px solid #3c6eb2;
   width: 100%;
   text-align: center;
@@ -267,7 +266,7 @@ nav.main_menu .menu ul.list_hamburger li {
   font-family: 'Questrial', sans-serif;
   font-weight: 400;
 }
-nav.main_menu .menu ul.list_hamburger li:hover {
+nav.main_menu .menu ul.dropdown_menu li:hover {
   background-color: #3c6eb2;
   transition: 0.3s ease-in;
 }
@@ -347,6 +346,7 @@ div.hero-image {
   background-size: cover;
   background-color: #f4f4f4;
   height: 75vh;
+  min-height: 650px;
   max-width: 100%;
   display: block;
 }
