@@ -8,32 +8,37 @@ $(function() {
 
 //HAMBURGER MENU
 
-$( document ).ready(function() {
+(function() {
+    'use strict'
 
-    $( ".cross" ).hide();
-    $( ".menu" ).hide();
-    $( ".menu_hamburger" ).click(function() {
-        $( ".menu" ).slideToggle( "slow", function() {
-            $( ".menu_hamburger" ).hide();
-            $( ".cross" ).show();
+    $(document).ready(function () {
+
+        $(".cross").hide();
+        $(".menu").hide();
+        $(".menu_hamburger").click(function () {
+            $(".menu").slideToggle("slow", function () {
+                $(".menu_hamburger").hide();
+                $(".cross").show();
+            });
         });
+
+        $(".cross").click(function () {
+            $(".menu").slideToggle("slow", function () {
+                $(".cross").hide();
+                $(".menu_hamburger").show();
+            });
+        });
+
     });
 
-    $( ".cross" ).click(function() {
-        $( ".menu" ).slideToggle( "slow", function() {
-            $( ".cross" ).hide();
-            $( ".menu_hamburger" ).show();
-        });
+    //QUESTIONS HERO IMAGE
+
+    $("#todo").click(function () {
+        $("#todo_text").focus();
     });
 
-});
+    $("#togo").click(function () {
+        $("#togo_text").focus();
+    });
+})()
 
- //QUESTIONS HERO IMAGE
-
-$( "#todo" ).click(function() {
-    $( "#todo_text" ).focus();
-});
-
-$( "#togo" ).click(function() {
-    $( "#togo_text" ).focus();
-});
