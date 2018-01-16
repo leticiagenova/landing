@@ -1,0 +1,267 @@
+header, .main
+  /*
+  transition none
+  height 205px
+  border-top 15px solid palette['blue']; */
+
+header
+  position relative
+  clearfix()
+  padding-top 30px
+
+nav.main_menu
+  position absolute
+  top 53px
+  right 0
+  ul.list li
+    display inline-block
+    margin-left 40px
+    {FONT_SANS_REGULAR}
+    color white
+    z-index 1
+    position relative
+    padding 10px
+    a:after
+      text-align left
+      content ''
+      margin 0
+      opacity 0
+      position absolute
+      bottom 0
+      left 0
+      right 0
+      width 0
+      border-radius 5px
+    a:hover
+      color #fff
+      z-index 1
+      &:after
+        z-index -10
+        animation fill .5s forwards
+        -webkit-animation fill .5s forwards
+        -moz-animation fill .5s forwards
+        opacity 1
+        width 100%
+  button.menu_hamburger
+      margin-left 55px
+      width 40px
+      height 40px
+      border-radius 100%
+      border none
+      background-color #fff
+      color #7b7b7b
+      z-index:10000000000000;
+      &:hover
+        background-color #3C6EB2
+        color #fff
+  button.cross
+    margin-left 55px
+    width 40px
+    height 40px
+    border-radius 100%
+    border none
+    background-color #fff
+    color #7b7b7b
+    z-index:10000000000000;
+    &:hover
+      background-color #3C6EB2
+      color #fff
+  .menu
+    background-color #fff
+    z-index 1000000
+    width 40%
+    position absolute
+    right -45px
+    border-radius 5px
+    top 47px
+    ul.dropdown_menu
+      display block
+      a
+        color #3C6EB2
+        &:hover
+          color white
+          transition none
+      li
+        border-bottom 1px solid #3C6EB2
+        width 100%
+        text-align center
+        padding 15px 0
+        {FONT_SANS_REGULAR}
+        &:hover
+          background-color #3C6EB2
+          -webkit-transition 0.3s ease-in
+          -moz-transition 0.3s ease-in
+          -o-transition 0.3s ease-in
+          transition 0.3s ease-in
+
+
+
+  /*HOVER FILL MENU*/
+  @-webkit-keyframes fill
+   0%
+    width 0%
+    height 1px
+
+    50%
+      width 100%
+      height 1px
+
+    100%
+      width 100%
+      height 100%
+      background #3C6EB2
+/*END HOVER FILL MENU*/
+div.logo
+  display inline-block
+  margin-top 20px
+  .logo_name
+    display inline
+    color #fff
+    left 66px
+    top 66px
+    position absolute
+    {FONT_SANS_BOLD}
+    font-size 1.3rem
+    letter-spacing 0.1rem
+
+  .logo_img
+    max-width 50px
+    height auto
+    display inline-block
+
+/*SOCIAL MEDIA*/
+
+div.social_media .fa-facebook, .fa-twitter
+  position absolute
+  color #fff
+  border 2px solid #fff
+  border-radius 100%
+  width 20px
+  height 20px
+  padding 5px 5px 2px 5px
+  top 370px
+  right 0
+  text-align center
+
+div.social_media .fa-twitter:hover
+  background-color #0084b4
+  border-color #0084b4
+  -webkit-transition 0.3s ease-in
+  -moz-transition 0.3s ease-in
+  -o-transition 0.3s ease-in
+  transition 0.3s ease-in
+
+div.social_media .fa-facebook:hover
+  border-color #3b5998
+  background-color #3b5998
+  -webkit-transition 0.3s ease-in
+  -moz-transition 0.3s ease-in
+  -o-transition 0.3s ease-in
+  transition 0.3s ease-in
+
+div.social_media:before
+  content ''
+  border 1px solid #fff
+  right 1.7%
+  top 130px
+  height 170px
+  position absolute
+
+i.fa.fa-facebook
+  top 330px
+
+/* HERO IMAGE */
+  
+div.hero-image
+  background-image url("../img/greece.png")
+  background-repeat no-repeat
+  background-position center
+  -webkit-background-size cover
+  -moz-background-size cover
+  -o-background-size cover
+  background-size cover
+  background-color #f4f4f4
+  height 75vh
+  min-height 650px
+  max-width 100%
+  display block
+
+.hero-text
+  position absolute
+  color #fff
+  letter-spacing 0.2rem
+  line-height 3.5rem
+  font-size 3.5vw
+  {FONT-SERIF-REGULAR}
+  top 345px
+  &:after
+    display block
+    content ""
+    height 2px
+    width 30%
+    background #fff
+    margin-top 30px
+
+/*QUESTIONS HERO IMAGE*/
+
+div.form_group
+  column(2/7)
+  display inline
+  color #fff
+  margin-top 460px
+  label
+    font-size 2vh
+    {FONT_SANS_REGULAR}
+    display inline
+  input[type="radio"] /* custom checkbox*/
+    display none
+    & + label:before /* unchecked icon */
+      font-family FontAwesome
+      content '\f1db'
+      display inline-block
+      padding 5px
+      font-size 18px
+      vertical-align middle
+      line-height 1.8
+    &:checked + label:before  /* checked icon */
+      font-family FontAwesome
+      content "\f058"
+
+      display inline-block
+      font-size 18px
+      vertical-align middle
+      mline-height 1.8
+      border-color blue
+
+  input[type="text"] /* custom text field */
+    border none
+    border-bottom 2px solid #dcdfe1
+    outline none
+    background-color transparent
+    font-size 1em
+    color #fff
+    margin-top 6px
+    &.input_todo
+      width 25vh
+    &.input_togo
+      width 26vh
+    &:focus
+      border-bottom-color #3C6EB2
+      -webkit-transition 0.3s ease-in
+      -moz-transition 0.3s ease-in
+      -o-transition 0.3s ease-in
+      transition 0.3s ease-in
+  button  /*BUTTON SEARCH HEADER*/
+    font-size 1.4vw
+    color #414141
+    padding 15px 45px 15px 45px
+    border-radius 5px
+    border #fff
+    background-color #fff
+    //letter-spacing 0.1em
+    font-family 'Maven Pro', sans-serif;
+    font-weight 500
+    &:hover
+      background-color #3C6EB2
+      color #fff
+      border-color #3C6EB2

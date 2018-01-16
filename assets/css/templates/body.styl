@@ -1,0 +1,68 @@
+/*VERTICAL LINE*/
+.gray_line:before
+  position absolute
+  content ''
+  display inline-block
+  border 1px solid rgba(165, 170, 174, 0.1)
+  top -70px
+  left 850px
+  height 150px
+
+//FIRST TITLE
+
+div.title
+  column(2/2)
+  margin-top:120px
+  h2
+    font-family: 'Playfair Display', serif;
+    font-size 2.5vw
+    display inline
+    float left
+    letter-spacing 0.1rem
+    color #404040
+  p
+    float right
+    display inline
+    {FONT_SANS_SEMIBOLD}
+    font-size 1.3vw
+    letter-spacing 0.1rem
+    color #A9B8CE
+    &:after
+      content ''
+      display inline-block
+      border-bottom  2px solid #A9B8CE
+      width 100px
+      margin-left 20px
+      margin-bottom 0.3vw
+
+//BELOW TITLE
+div.options
+  column(1/3)
+  text-align justify
+  margin-top 80px
+  padding-bottom 80px
+  position relative
+  img
+    max-width 65px
+    max-height 65px
+    margin-left 70px
+    margin-bottom 20px
+  h3
+    color darkslateblue
+    {FONT_SANS_REGULAR}
+    font-size 1.1rem
+    letter-spacing 0.1 rem
+    margin-bottom 20px
+    &:before
+      content ''
+      border-bottom 2px solid #3C6EB2
+      width 55px
+      display inline-block
+      margin-bottom 5px
+      margin-right 20px
+    +below(3)
+      color red
+  p
+    {FONT_SANS_REGULAR}
+    line-height 1.4
+    color darkslateblue
